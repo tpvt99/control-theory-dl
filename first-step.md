@@ -3,21 +3,16 @@ This is what I ask claude to help me find research topics: I want to research in
 
 Where theory, simulation and top venues overlap
 
-┌─────┬──────────────────────────────────────────────────────────┬─────────────────────────────┬─────────────┬──────────────────────────────┐
-│  #  │                        Direction                          │ Simulation  │             Risk             │
-│     │                                                          │                             │     fit     │                              │
-├─────┼───────────────────────────────────────────────────────────┼─────────────┼──────────────────────────────┤
-│ A   │ Learned certificates (neural Lyapunov and control        │ Stability and safety        │ Strong      │ Crowded, and scaling beyond  │
-│     │ barrier functions, certified safe RL)            ation    │             │ low dimensions is hard       │
-├─────┼──────────────────────────────────────────────────────────┼─────────────────────────────┼─────────────┼──────────────────────────────┤
-│     │ Non-asymptotic learning for control (LQR sample           │ Simple, so  │ Heavy math, and the audience │
-│ B   │ complexity, system identification, online and            │ Rates, lower bounds, regret │ cheap       │  is closer to COLT or L4DC   │
-│     │ non-stochastic control regret)                            │             │                              │
-├─────┼──────────────────────────────────────────────────────────┼─────────────────────────────┼─────────────┼──────────────────────────────┤
-│     │ Imitation learning and behavior cloning as contro         │             │ Moving fast, so the novelty  │
-│ C   │ (compounding error, conditions on expert stability,      │ Error propagation bounds    │ Strong      │ window is short              │
-│     │ action chunking, diffusion policies)                      │             │                              │
-├─────┼──────────────────────────────────────────────────────────┼─────────────────────────────┼─────────────┼──────────────────────────────┤
+Direction | Theory hook | simulation fit | Risk
+
+1. Learned certificates (neural Lyapunov and control barriers functions, certified safe RL). It is stablity and safety guarantees, verification. Simulation fit is Strong.  Crowed and scaling beyond low dimensions is hard.
+
+2.  Non-asymtotic learning for control (LQR sample complexity, system identification, online and non-tochastic contorl regret). Rates, lower bounds, regret. Simulation is cheap. Heavy math and the audience is closer to COLT/ L4DC. Rates, lower bounds, regret
+
+3. Imitation learning and bheaviour clong as control (compoudning error, conditions on expert stability, action chunking, diffusion policies). Theory hook is error propagation bounds. Simulation fit is strong. Risk is that moving fast so the novelty window is short
+
+4.
+
 │     │ MPC with learned models (differentiable MPC,              │             │ Easy to end up with only an  │
 │ D   │ model-error-aware suboptimality bounds, MPC as a policy  │ robustness under model      │ Strong      │ engineering contribution     │
 │     │ class)                                                    │             │                              │
