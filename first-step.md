@@ -1,25 +1,5 @@
-collection of the key insights from our discussion.
-
-If you have nothing yet, I'll suggest running deep-research in Socratic mode first. You can answer in whatever language you like.
-
-✻ Sautéed for 18s · done Monday 2:25 PM
-
-※ recap: We're starting a plan-mode session to build a Chapter Plan for your control-theory-and-AI paper, and I've asked three intake questions about topic, materials, and preferred structure. Next step: answer those three questions so I can begin the readiness check. (disable recaps in /config)
-
-❯ /academic-research-skills:ars-plan i want to research in a topic of control theory with data-driven deep learning/reinforcement learning and simulate mostly. I want to know what should be the topic in control theory with DL/RL to work on? i have experience in planning, control, LLM, embodied AI, foundation model. I want to avoid fomo paper where only in AI and training. I want it strong theory and engineering that can work well with simulation to publish paper in a* journal conference in AI such as NIPS or ICML or ACC control theory, and using these knowledge to enahce my control theory, AI coding skillset, Deep learning theory and apply for phd. Can you suggest me path moving forward?
+This is what I ask claude to help me find research topics: I want to research in a topic of control theory with data-driven deep learning/reinforcement learning and simulate mostly. I want to know what should be the topic in control theory with DL/RL to work on? i have experience in planning, control, LLM, embodied AI, foundation model. I want to avoid fomo paper where only in AI and training. I want it strong theory and engineering that can work well with simulation to publish paper in a* journal conference in AI such as NIPS or ICML or ACC control theory, and using these knowledge to enahce my control theory, AI coding skillset, Deep learning theory and apply for phd. Can you suggest me path moving forward?
 1 skill available
-
-● Skill(academic-research-skills:academic-paper)
-Successfully loaded skill
-
-Step 0: Research readiness
-
-You have strong skills and a clear goal. You don't yet have a research question (RQ), data or a literature map. By the plan-mode protocol, that means the first job is to focus the topic, not to plan chapters. I'll do two things in order:
-
-1. Give you a map of the area, so you have something to react to.
-2. Ask questions that narrow it.
-
-I won't choose the topic for you. Your question will be much stronger if you find it yourself. The directions below come from my memory of the field, not a fresh search. I'd verify the recent literature before you commit to any of them.
 
 Where theory, simulation and top venues overlap
 

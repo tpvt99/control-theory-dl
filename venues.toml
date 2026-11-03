@@ -1,0 +1,13 @@
+# Add a venue here, then run:  python3 -m paperhub sync <name>
+# kinds: pmlr | nips | openreview.   (arXiv is date-based, see [arxiv] and `paperhub arxiv`)
+icml2024   = { kind = "pmlr", volume = "v235", venue = "ICML", year = 2024 }
+icml2025   = { kind = "pmlr", volume = "v267", venue = "ICML", year = 2025 }
+corl2024   = { kind = "pmlr", volume = "v270", venue = "CoRL", year = 2024 }
+l4dc2025   = { kind = "pmlr", volume = "v283", venue = "L4DC", year = 2025 }
+neurips2024 = { kind = "nips", year = 2024 }
+neurips2025 = { kind = "nips", year = 2025 }
+iclr2025   = { kind = "openreview", venueid = "ICLR.cc/2025/Conference", venue = "ICLR", year = 2025 }
+
+[arxiv]
+kind = "arxiv"
+categories = ["cs.LG", "cs.AI", "cs.RO", "cs.CL", "cs.CV", "stat.ML", "eess.SY", "math.OC"]

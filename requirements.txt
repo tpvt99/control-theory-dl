@@ -1,0 +1,2 @@
+requests>=2.31
+openreview-py>=1.40   # optional: only needed for ICLR/ICML-OR/TMLR via OpenReview
