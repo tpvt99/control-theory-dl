@@ -11,28 +11,15 @@ Direction | Theory hook | simulation fit | Risk
 
 3. Imitation learning and bheaviour clong as control (compoudning error, conditions on expert stability, action chunking, diffusion policies). Theory hook is error propagation bounds. Simulation fit is strong. Risk is that moving fast so the novelty window is short
 
-4.
+4. MPC with learned models (differentiable MPC, model-error-aware suboptimality bounds, MPC as a policy class). Theory hook: Suboptimality and robustness under model error. Simulation is strong. Risk is easy to end up with only an engineering contribution
 
-│     │ MPC with learned models (differentiable MPC,              │             │ Easy to end up with only an  │
-│ D   │ model-error-aware suboptimality bounds, MPC as a policy  │ robustness under model      │ Strong      │ engineering contribution     │
-│     │ class)                                                    │             │                              │
-├─────┼──────────────────────────────────────────────────────────┼─────────────────────────────┼─────────────┼──────────────────────────────┤
-│     │ Data-driven control from behavioral systems theor         │             │ Mature control-community     │
-│ E   │ (DeePC, Willems' fundamental lemma, nonlinear            │ Data-sufficiency conditions │ Strong      │ niche                        │
-│     │ extensions)                                               │             │                              │
-├─────┼──────────────────────────────────────────────────────────┼─────────────────────────────┼─────────────┼──────────────────────────────┤
-│ F   │ Structured dynamics learning (Koopman, Lagrangiang        │ Strong      │ Weak baselines are a common  │
-│     │ Hamiltonian networks, passivity)                         │ guarantees                  │             │ reviewer complaint           │
-├─────┼───────────────────────────────────────────────────────────┼─────────────┼──────────────────────────────┤
-│     │ Transformers or foundation models viewed through control │ Expressivity and            │             │ Can drift into the "FOMO"    │
-│ G   │  (in-context system identification and control,  s        │ Moderate    │ pattern you want to avoid    │
-│     │ closed-loop stability of generative policies)            │                             │             │                              │
-├─────┼───────────────────────────────────────────────────────────┼─────────────┼──────────────────────────────┤
-│ H   │ Robust RL and the sim-to-real gap (robustness as a       │ Robust control bounds       │ Strong      │ Hard to say something new    │
-│     │ control problem, domain randomization theory)             │             │                              │
-└─────┴──────────────────────────────────────────────────────────┴─────────────────────────────┴─────────────┴──────────────────────────────┘
+5. Data-driven control from beahvioral system theory (DeePC, Willems' fundamental lemma, nonlinear extensions). Theory hook: Data-sufficiency conditions. Simulation is strong. Risk is mature control-community niche
 
-A test for any candidate
+6. Structured dynamics learning (Kooopman, lagrangian and Hamiltonian networks, passivity). Structure-preserving guarantees. Strong. Weak baselineas are a common reviewer compalaint.
+
+7. Transformers or foundation model viewed through control (in-context system identification and control, closed-loop stability of generative policies). Expressivity and closed-loop analysis. Moderate. Can drift into the "FOMO" pattern you want to avoid
+
+8. Robust RL and sim-to-real gap (robustness, domain randomization theory). Robust control bounds. Strong. Hard to say something new
 
 A topic fits your constraints if it passes all four:
 
@@ -41,136 +28,9 @@ A topic fits your constraints if it passes all four:
 3. Not won by scale. More compute and data alone shouldn't beat your approach.
 4. Your edge. You can name why you, with your planning, L, are better placed than a pure control or pure ML student.
 
-A rough path to a PhD application
+Here are found things:
 
-- Months 0–2: foundations. Read one core text for each arassic result in code from scratch (for example LQR withlearned dynamics). Don't use a library for the core step.
-- Months 2–4: a reproduction with a twist. Pick two or thction. Reproduce them and find where their assumptionsbreak.
-- Months 4–9: a small original contribution. Aim for a wost. Only aim at NeurIPS or ICML if the theory is real. Your PhD application is also strengthened by one clean, well-argued result, since a paper count doesn't carry the same weight.
-
-Questions to narrow it
-
-1. Theory depth. Which would you honestly prefer to spend months on: proving a bound, or building a system whose behavior you can explain? Your
-   answer separates directions B, E and A from C, D and G
-2. Edge. Of your experience (planning, control, LLM, embodied AI, foundation models), which have you gone deepest in, and which problems did you
-   find unsatisfying there?
-3. Frustration. Is there a failure you've seen in practice (a policy that destabilizes, a planner that violates constraints, a model that doesn't
-   transfer) that made you think "there should be a princ
-4. Math comfort. Which can you do with confidence today: Lyapunov analysis, convex optimization, concentration inequalities, or none yet? This
-   decides what you build first.
-5. Reaction to the table. Which two rows interested you most, and which did you rule out immediately? Tell me why. The reasons matter more than
-   the picks.
-
-If you want a literature map before answering, I can run e to build one. Otherwise, answer the questions here andwe'll narrow it together.
-
-✻ Cooked for 35s · done 2:27 PM
-
-※ recap: Goal: pick a control-theory-plus-DL/RL research topic (strong theory, simulation-friendly, NeurIPS/ICML/ACC-level) to support a PhD
-  application. I've given a map of candidate directions pluext, answer them, or ask me to run a deep-researchliterature map first. (disable recaps in /config)
-
-❯ /academic-research-skills:deep-research can you run deep research in the literature field so i can understand widely better before i can answer
-you?
-
-I'm using lit-review mode for this: a literature landscape table. The skill asks you to pick a review form beforethe search starts.
-
-▎ Before the review starts: which form of literature review?
-▎ ARS does not choose this for you. There is no default a order below is not a ranking.
-▎
-▎ - Systematic review: answers a focused question with a ed in advance, with two people screening independentlywhere possible. Months to more than a year for a team of several people, often with a registered protocol. In ARS: systematic-review mode.
-▎ - Scoping review: maps what has been studied on a topicgaps, using a systematic approach. The work grows with thebreadth of the topic. ARS has no separate mode for it.
-▎ - Narrative or integrative review: builds an argument oture. In a narrative review the author chooses the sources; an integrative review documents its search and evaluation and can combine different study designs. The work depends on the scope the author
-▎ sets. In ARS: lit-review mode.
-▎ - Rapid review: a systematic review with some steps shortened or left out to deliver sooner, typically within weeks to a few months. ARS has no
-▎ separate mode for it.
-▎ - No formal review: background from the sources at hand, for example for an introduction. It does not claim to cover the literature.
-▎
-▎ Reply with the form you want, or reply "skip" to continue as you are. Either reply is your decision, and this note will not appear again in
-▎ this project.
-
-I'll start the search once you reply.
-
-✻ Worked for 15s · done 2:35 PM
-
-❯ scoping review is that correct? i want to know what is bring, remaining questions, long lasting impact and thehard/difficulty of research direction
-
-The choice is yours, and ARS doesn't judge which form fits. Here is what a scoping review covers, set against what you listed.
-
-What a scoping review does
-- It maps what has been studied on a topic, using a syste
-- It identifies the main concepts.
-- It shows where the gaps are.
-- The work grows with the breadth of the topic.
-
-Your list against that
-- Breadth, what has been studied, remaining questions: th is built to produce.
-- Long-lasting impact and how hard each direction is: a scoping review doesn't normally assess these. It maps what exists and doesn't judge
-  quality or significance. I can still add them as a clear on top of the map. That layer would be my synthesis fromthe evidence, not a result of the review method, and you should treat it as a starting hypothesis to check.
-
-Taking "scoping review" as your reply
-- I'll continue in lit-review mode. ARS has no separate sview protocol and the reporting checklist (PRISMA-ScR, thePRISMA extension for scoping reviews) stay with you.
-- I can structure the output around that checklist so it'
-
-Proposed scope
-- Directions: the eight in my earlier table, A–H.
-- Period: 2018 to October 2026, plus earlier foundational
-- Venues: NeurIPS, ICML, ICLR, L4DC, CDC, ACC, CoRL, and journals such as IEEE TAC, Automatica, and JMLR.
-- Per direction: what has been studied, the main methods pen questions, how long-lived the line of work looks, andthe practical difficulty.
-- Verification: every paper I cite will be checked agains Anything I can't confirm exists is left out.
-
-Should I run it with this scope? If you want to change th or the venues, tell me what to change.
-
-✻ Sautéed for 11s · done 2:39 PM
-
-❯ yes please running
-
-● Web Search("neural Lyapunov function control barrier funcreinforcement learning survey")
-Did 1 search in 6s
-
-● Web Search("non-asymptotic sample complexity learning linear quadratic regulator system identification online control regret")
-Did 1 search in 10s
-
-● Web Search("imitation learning continuous control compounolicy stability")
-Did 1 search in 7s
-
-● Web Search("learning-based model predictive control survey guarantees learned dynamics differentiable MPC")
-Did 1 search in 6s
-
-● Web Search("data-enabled predictive control DeePC Willemssurvey")
-Did 1 search in 7s
-
-● Web Search("Koopman operator deep learning control guarantees Lagrangian Hamiltonian neural networks control review")
-Did 1 search in 7s
-
-● Web Search("transformers in-context learning control systmical systems theory")
-Did 1 search in 7s
-
-● Web Search("robust reinforcement learning sim-to-real gap domain randomization theory robust control")
-Did 1 search in 7s
-
-● Web Search("port-Hamiltonian neural network control stabiural network energy-based control learned")
-Did 2 searches in 8s
-
-● Web Search("neural control barrier functions scalability verification open challenges high-dimensional 2025")
-Did 1 search in 8s
-
-● Web Search("online nonstochastic control gradient perturb Agarwal Boston book")
-Did 1 search in 6s
-
-● Web Search("robust Markov decision processes domain randomization equivalence distributionally robust RL sample complexity")
-Did 1 search in 7s
-
-● Web Search("diffusion policy closed-loop stability analyson models robotics safety guarantees 2025 2026")
-Did 1 search in 8s
-
-● Web Search("learning for dynamics and control L4DC 2025 open problems data-driven control survey Annual Reviews in Control learning-based
-            control")
-Did 1 search in 5s
-
-I ran 14 searches across the eight directions. This is a first-pass scoping map. It is not a full PRISMA-ScR review, and the limits are at the
-end. Ratings in the last two columns of the table are my
-
-What I found, direction by direction
-
-A. Learned certificates (neural Lyapunov and barrier func
+A. Learned certificates (neural Lyapunov and barrier func)
 - Studied: Dawson et al. survey neural Lyapunov, barrier and contraction certificates. Kushwaha & Biron (2025) review them specifically for safe
   RL.
 - Open: Verification doesn't scale. Vertovec et al. report counterexamples becoming extremely sparse in high dimensions, and a verified value
@@ -213,25 +73,15 @@ My interpretive ratings
 These ratings rest on how mature each line of work is, how stable its problem formulation is, and how much of it depends on a particular
 architecture.
 
-┌─────────────────────────┬─────────────┬──────────────────┬──────────────────────┐
-│                         │  Longevity  │ Math difficulty  │ Sim/engineering difficulty │     Crowdedness      │
-├─────────────────────────┼─────────────┼──────────────────┼──────────────────────┤
-│ A. Certificates         │ High        │ Medium-high      │ High (verification cost)   │ Medium-high          │
-├─────────────────────────┼─────────────┼──────────────────┼──────────────────────┤
-│ B. Non-asymptotic       │ Very high   │ Very high        │ Low                        │ Low-medium           │
-├─────────────────────────┼─────────────┼──────────────────┼──────────────────────┤
-│ C. Imitation as control │ Medium-high │ High             │ Medium                     │ High and fast-moving │
-├─────────────────────────┼─────────────┼──────────────────┼──────────────────────┤
-│ D. Learned MPC          │ High        │ High (nonlinear) │ Medium                     │ Medium               │
-├─────────────────────────┼─────────────┼──────────────────┼──────────────────────┤
-│ E. Behavioral theory    │ Medium-high │ Medium           │ Low-medium                 │ Medium               │
-├─────────────────────────┼─────────────┼──────────────────┼──────────────────────┤
-│ F. Structured models    │ Medium      │ Medium           │ Medium                     │ Medium               │
-├─────────────────────────┼─────────────┼──────────────────┼──────────────────────┤
-│ G. In-context control   │ Unclear     │ High             │ Medium                     │ Rising               │
-├─────────────────────────┼─────────────┼──────────────────┼──────────────────────┤
-│ H. Robust/sim-to-real   │ High        │ Medium-high      │ Medium                     │ Medium               │
-└─────────────────────────┴─────────────┴──────────────────┴──────────────────────┘
+Name                  | Longevity | Math difficulty | Sim/engineering difficulty | Crowdedness
+A. Certificates         High         Medium-high       High                          Medium-high
+B. Non-asymptotic       very high     very-high         low                         low-medium
+C. Imitation as control medium-high   high              medium                      medium
+D. Learned MPC          High          high              medium                      medium
+E. Behavioral theory    medium-high   medium            low-medium                  medium
+F. structured models    medium        medium            medium                      medium
+G. In-context control   unclear       high              medium                      rising
+H. Robust/sim-real      high          med-high          med                         med 
 
 Patterns across the directions
 
@@ -239,15 +89,3 @@ Patterns across the directions
 - Identification is far better understood than control. Tearning papers and in the sample-complexity papers.
 - Several 2025–26 gaps sit near your background. Diffusion policy stability and in-context control are the two I'd flag. They are also where the
   novelty window may be short.
-
-Limits of this review
-
-- I used a web search engine, not Scopus, Web of Science
-- A single AI reviewer did the screening, and nothing was independently checked.
-- I worked from search summaries and abstracts. I didn't er.
-- Venue acceptance, citation counts and the 2026 preprints are unchecked, and some 2026 arXiv items may have changed.
-- Directions F and G got thinner coverage, and I didn't swith formal guarantees at all.
-
-Re-read the primary source before you cite any of these.
-
-You can now go back to the five narrowing questions from ull text of two or three papers in whichever directionsinterest you, or save this map as a file in the project folder.
